@@ -2,10 +2,29 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="container">
-    <button id="complimentButton">Get a compliment</button>
-    <button id="getAFortune">Get a Fortune</button>
+    <button id="complimentButton" class="button">Get a compliment</button>
+    <button id="getAFortune" class="button">Get a Fortune</button>
+
+    <div class="to-do-list">
+      <div class="header-container">
+        <h1 class="header-title">To do List</h1>
+
+        <form class="input">
+          <input type="text" id="task" required placeholder="Type a To Do" />
+          <button id="submit">Submit</button>
+        </form>
+      </div>
+
+      <ul class="list" id="task-list"></ul>
+    </div>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
   </body>

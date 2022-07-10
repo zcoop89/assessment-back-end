@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px;
+  background-color: rgb(190, 95, 199);
+  color: black;
+  border-radius: 4px;
+  margin: 16px;
+  cursor: pointer;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0px black;
+}
+
+.button:hover {
+  box-shadow: none;
+  transform: translateY(4px);
+  background-color: white;
+}
+
+.header-title {
+  padding: 16px 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.to-do-list {
+  margin: 16px;
+  max-width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.list {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.list-item {
+  padding: 16px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list.item:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.list-item.complete {
+  text-decoration: line-through;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+.header-container {
+  padding: 16px;
+}
+.input {
+  display: flex;
+}
+
+#task {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#submit {
+  padding: 8px 16px;
+  border: none;
+  margin-left: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(190, 95, 199);
+  color: white;
+}

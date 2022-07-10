@@ -1,3 +1,5 @@
+const tasks = [];
+
 module.exports = {
   getCompliment: (req, res) => {
     const compliments = [
@@ -25,5 +27,27 @@ module.exports = {
     let randomIndex = Math.floor(Math.random() * fortunes.length);
     let randomFortune = fortunes[randomIndex];
     res.status(200).send(randomFortune);
+  },
+  addTask: (req, res) => {
+    const { task } = req.body.params;
+    if (task === "") {
+      return res.status(400).send({ error: "No task provided" });
+    }
+    const newTask = {
+      complete: false,
+      message: task,
+    };
+    tasks.push(newTask);
+    res.status(200).send(tasks);
+  },
+  updateTask: (req, res) => {
+    const { updatedTask, index } = req.body.params;
+    tasks.splice(index, 1, updatedTask);
+    res.status(200).send(tasks);
+  },
+  deleteTask: (req, res) => {
+    const indexToDelete = req.params.index;
+    tasks.splice(indexToDelete, 1)
+    res.status(200).send(tasks);
   },
 };
